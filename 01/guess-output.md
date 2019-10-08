@@ -10,8 +10,15 @@ setTimeout(sayHello, 1000);
 console.log("Hey You!");
 ```
 
- output
 
+ output
+<!-- Hey you
+      .
+      .
+    1000 ms 
+      .
+      .
+Hey you called me  -->
 2.
 ```js
 function sayHello() {
@@ -23,6 +30,11 @@ setTimeout(sayHello, 0);
 console.log("Hey You!");
 ```
  output
+<!-- Hey You
+      .
+     0ms
+      .
+Hey You Called Me -->
 
 3.
 ```js
@@ -36,6 +48,13 @@ function main() {
 main();
 ```
  output
+ <!-- A
+      C
+      .
+     0ms
+      .
+      B -->
+ 
 
 4.
 ```js
@@ -54,8 +73,18 @@ function main() {
   runWhileLoopForNSeconds(3);
   console.log("C");
 }
+```
 
- output
+output
+  <!-- A
+       .
+       .
+    3000ms
+       .
+       .
+       C
+       B -->
+
 
 5. Look at the output of the code below to understand hwo things are happening.
 
@@ -69,7 +98,7 @@ function runWhileLoopForNSeconds(sec) {
 }
 function main() {
   var current = Date.now();
-  console.log("A", Date.now() - current);
+  console.log("A", Date.now() - current); 
   setTimeout(function exec() {
     console.log("B", Date.now() - current);
   }, 1000);
@@ -80,3 +109,4 @@ function main() {
 main();
 
 ```
+  Date.now() - the value changes in every miliSecond ;
