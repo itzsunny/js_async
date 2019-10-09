@@ -8,10 +8,29 @@
     <title>Github User Search</title>
   </head>
   <body>
-    <div>
-      <input type="text" placeholder="Enter an user">
-      <img src="#" alt="img">
+    <div class="container">
+      <section>
+      <div class="input_container">
+      <img src="" class="logo_img">
+      <input id="input" type="text" placeholder="Enter an user">
+      <img src="search.png" class="search">
+      </div>
+      </section>
+      </section>
     </div>
+    <section class="display">
+      <div class="img_container">
+          <img src="" class="user_img">
+      </div>
+        <div class="info_container">
+          <h2 id = "name"></h2>
+          <h3 id = 'bio'></h3>
+          <p id = 'followers'></p>
+          <p id = 'following'></p>
+          <p id = 'repos'></p>
+          <p id = 'gists'></p>
+        </div>
+
     <script src="./main.js"></script>
   </body>
 </html>
