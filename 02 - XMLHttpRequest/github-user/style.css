@@ -1,4 +1,53 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*    body  */
 *,*:before *:after {
     box-sizing: border-box;
 }
@@ -39,25 +88,63 @@ input::placeholder {
    border-radius: 50%;
 }
 .display {
-
-    width:40%;
     margin: 2rem auto;
+    display: grid;
+    grid-gap: 1rem;
     padding:1rem;
     border-radius: 1rem;
+    grid-template-columns: 1fr 2fr;
+    width:35%;
   
 }
 .info_container {
-    text-align: center;
+    background-attachment: fixed;
 }
+.img_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .user_img {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     border-radius: 10px;
-    display: block;
 }
 
 .search {
     position:absolute;
     top:1rem;
     width:5%;
+}
+#name {
+    font-size: 1.5rem;
+    display: inline;
+    color:#327AB7;
+    padding-right: 0.5rem;
+}
+#user_name {
+    display: inline-block;
+    color:rgba(0,0,0,0.4);
+}
+#bio{
+ margin:1rem 0;
+ margin-bottom: 2.5rem;
+ font-size: 1.2rem;
+ color: rgba(0,0,0,0.4);
+}
+#followers,#following,#repos,#gists {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.8);
+}
+#following {
+    margin-bottom: 0.5rem;
+}
+#followers{
+    margin-right:4rem;
+    margin-bottom: 0.5rem;
+}
+#repos {
+    margin-right: 5.5rem;
 }
